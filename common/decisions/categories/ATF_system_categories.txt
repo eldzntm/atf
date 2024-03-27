@@ -1,0 +1,7 @@
+ATF_system_categories = {
+    icon = generic_research
+    allowed = {
+      is_ai = no
+    }
+    priority = -100
+}

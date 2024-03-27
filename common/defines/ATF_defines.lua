@@ -1,0 +1,3 @@
+NDefines.NResistance.FOREIGN_MANPOWER_MIN_THRESHOLD = 0;
+NDefines.NCountry.MIN_STABILITY = -1.0;
+NDefines.NCountry.MAX_STABILITY = 1.0;

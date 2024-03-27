@@ -1,0 +1,130 @@
+add_namespace = atf_advanture
+
+country_event = { # 이주를 바라는 생존자 무리들
+    id = atf_advanture.1
+	title = atf_advanture.1.t
+	desc = atf_advanture.1.d
+    picture = GFX_report_event_generic_read_write
+
+    trigger = {
+        AND = {
+            NOT = { tag = ZZZ }
+            NOT = { has_country_flag = not_regular_advanture_event }
+        }
+        
+    }
+
+    timeout_days = 3
+
+    is_triggered_only = yes
+
+    immediate = {
+        set_variable_to_random = {
+            var = migration_people
+            min = 50
+            max = 150
+            integer = yes
+        }
+    }
+
+    option = { # 생존자들을 지역에 그대로둔다.
+        name = atf_advanture.1.a
+        clr_country_flag = not_regular_advanture_event
+        FROM.FROM = {
+            add_manpower = ROOT.migration_people
+        }
+        
+    }
+    option = { # 생존자들을 수도로 이주시킨다
+        name = atf_advanture.1.b
+        clr_country_flag = not_regular_advanture_event
+        capital_scope = {
+            add_manpower = ROOT.migration_people
+        }
+        add_stability = -0.01
+    }
+}
+
+country_event = { # 버려진 연구소 발견
+    id = atf_advanture.2
+	title = atf_advanture.2.t
+	desc = atf_advanture.2.d
+    picture = GFX_report_event_generic_read_write
+    
+    trigger = {
+        always = yes
+        NOT = { tag = ZZZ }
+    }
+
+    is_triggered_only = yes
+}
+
+country_event = { # 기름 발견
+    id = atf_advanture.3
+	title = atf_advanture.3.t
+	desc = atf_advanture.3.d
+    picture = GFX_report_event_generic_read_write
+    
+    trigger = {
+        always = yes
+        NOT = { tag = ZZZ }
+    }
+
+    is_triggered_only = yes
+}
+
+country_event = { # 식량 발견
+    id = atf_advanture.4
+	title = atf_advanture.4.t
+	desc = atf_advanture.4.d
+    picture = GFX_report_event_generic_read_write
+    
+    trigger = {
+        always = yes
+        NOT = { tag = ZZZ }
+    }
+
+    is_triggered_only = yes
+}
+
+country_event = { # 총기, 물자발견
+    id = atf_advanture.5
+	title = atf_advanture.5.t
+	desc = atf_advanture.5.d
+    picture = GFX_report_event_generic_read_write
+    
+    trigger = {
+        always = yes
+        NOT = { tag = ZZZ }
+    }
+
+    is_triggered_only = yes
+}
+
+country_event = { # 야생동물뗴 조우
+    id = atf_advanture.6
+	title = atf_advanture.6.t
+	desc = atf_advanture.6.d
+    picture = GFX_report_event_generic_read_write
+    
+    trigger = {
+        always = yes
+        NOT = { tag = ZZZ }
+    }
+
+    is_triggered_only = yes
+}
+
+country_event = { # 도적뗴 조우
+    id = atf_advanture.7
+	title = atf_advanture.7.t
+	desc = atf_advanture.7.d
+    picture = GFX_report_event_generic_read_write
+    
+    trigger = {
+        always = yes
+        NOT = { tag = ZZZ }
+    }
+
+    is_triggered_only = yes
+}

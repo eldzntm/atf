@@ -1,0 +1,8 @@
+ATF_reconstruction_categories = {
+    icon = generic_research
+    allowed = {
+      is_ai = no
+      NOT = { tag = ZZZ }
+    }
+    priority = 100
+}

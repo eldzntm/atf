@@ -1,0 +1,72 @@
+on_actions = {
+    on_startup = {
+        effect = {
+            every_country = {
+                limit = {
+                    is_ai = yes
+                    NOT = { tag = ZZZ }
+                }
+                delete_unit = {}
+                ZZZ = {
+                    annex_country = {
+                        target = PREV
+                    }
+                }
+            }
+
+            every_country = {
+                limit = {
+                    is_ai = no
+                    NOT = { tag = ZZZ }
+                }
+                set_variable_to_random = {
+                    var = random_start
+                    min = 4000
+                    max = 10000
+                    integer = yes
+                }
+                capital_scope = {
+                    add_core_of = PREV
+                    remove_core_of = ZZZ
+                    set_state_flag = explorationed_state
+                    add_manpower = var:PREV.random_start
+                    set_state_category = pastoral
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 1
+                        instant_build = yes
+                    }
+                    add_building_construction = {
+                        type = bunker
+                        level = 5
+                        instant_build = yes
+                        province = {
+                            all_provinces = yes
+                            limit_to_border = yes
+                        }
+                    }
+                }
+                clear_variable = var:random_start
+            }
+
+            if = { #영국 시작승점
+                limit = {
+                    ENG = { is_ai = no }
+                }
+                set_victory_points = {
+                    province = 6103
+                    value = 50
+                }
+            }
+            if = { #프랑스 시작승점
+                limit = {
+                    FRA = { is_ai = no }
+                }
+                set_victory_points = {
+                    province = 11506
+                    value = 50
+                }
+            }
+        }
+    }
+}

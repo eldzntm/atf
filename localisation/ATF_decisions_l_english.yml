@@ -1,0 +1,6 @@
+﻿l_english:
+ ATF_system_decisions:0 "시스템"
+ normalize_start:0 "§Y게임초기에 지연되어 발생하는 인력에 관련한 버그 및 문제를 해결하기 위한 3일에 걸친 임시적 조치에 대한 이유로 만들어진 미션§!"
+ normalize_start_desc:0 "이 미션은 §Y게임초기에 지연되어 발생하는 인력에 관련한 버그 및 문제를 해결하기 위한 3일에 걸친 임시적 조치에 대한 이유로 만들어진 미션§!이므로 무시하시고 게임을 진행하시면 됩니다."
+ ATF_reconstruction_categories:0 "사회재건"
+ infrastructure_reconstruction_on_map:0 "기반시설 재건"

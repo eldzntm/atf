@@ -1,0 +1,19 @@
+
+state = {
+	id = 795
+	name = "STATE_795"
+	manpower = 1
+	
+	state_category = wasteland
+
+	history={
+		owner = ZZZ
+		add_core_of = ZZZ
+	}
+	provinces = {
+		844 924 3846 3886 3926 6986 9869 11768
+	}
+
+	local_supplies = 0.0 
+}
+            

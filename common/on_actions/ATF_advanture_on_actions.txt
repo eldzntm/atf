@@ -1,0 +1,57 @@
+on_actions = {
+    on_daily = {
+        effect = {
+            set_variable_to_random = {
+                var = random_people
+                min = 25
+                max = 300
+                integer = yes
+            }
+        }
+        
+    }
+    on_state_control_changed = { #특별이벤트 선행
+        effect = {
+            set_country_flag = not_regular_advanture_event
+            if = { #콘윌 탐사
+                limit = {
+                    FROM.FROM = {
+                        NOT = { has_state_flag = explorationed_state }
+                        state = 123
+                    }
+                }
+                FROM.FROM = {
+                    set_state_flag = explorationed_state
+                    remove_core_of = ZZZ
+                    add_core_of = CAN #임시
+                    transfer_state_to = CAN #임시
+                    add_manpower = 10000
+                }
+            }
+        }
+    }
+
+    on_state_control_changed = { #평상시
+        random_events = {
+            99 = atf_advanture.1
+            1 = 0
+        }
+        effect = {
+            if = { #탐사했을떄
+                limit = {
+                    FROM.FROM = {
+                        NOT = { has_state_flag = explorationed_state }
+                        NOT = { is_owned_and_controlled_by = ZZZ }
+                    }
+                }
+                FROM.FROM = {
+                    set_state_flag = explorationed_state
+                    remove_core_of = ZZZ
+                    add_manpower = ROOT.random_people
+                    set_state_owner_to = ROOT
+                }
+            }
+        }
+        
+    }
+}

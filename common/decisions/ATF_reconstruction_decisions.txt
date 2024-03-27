@@ -1,0 +1,315 @@
+ATF_reconstruction_categories = {
+
+    infrastructure_reconstruction_on_map = { #맵에서 기반시설 건설
+        state_target = yes
+        target_root_trigger = {
+            any_owned_state = {
+                infrastructure < 5
+            }
+        }
+
+        days_remove = 2
+
+        days_re_enable = 1
+
+        target_array = ROOT.owned_states
+        target_trigger = {
+            FROM = {
+                infrastructure < 5
+            }
+        }
+        on_map_mode = map_only
+        icon = generic_research
+        cost = 20
+        complete_effect = {
+            FROM = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    upgrade_wasteland_state = { #주 업글
+        state_target = yes
+        target_root_trigger = {
+            any_owned_state = {
+                has_state_category = wasteland
+            }
+        }
+        available = {
+            FROM = {
+                has_state_category = wasteland
+                state_population > 1000
+                infrastructure > 0
+            }
+        }
+
+        days_remove = 2
+
+        days_re_enable = 1
+
+        target_array = ROOT.owned_states
+        target_trigger = {
+            FROM = {
+                has_state_category = wasteland
+                
+            }
+        }
+        on_map_mode = map_only
+        icon = generic_research
+        cost = 20
+        complete_effect = {
+            FROM = {
+               increase_state_category = yes
+            }
+        }
+    }
+
+    upgrade_pastoral_state = { #주 업글
+        state_target = yes
+        target_root_trigger = {
+            any_owned_state = {
+                has_state_category = pastoral
+            }
+        }
+        available = {
+            FROM = {
+                has_state_category = pastoral
+                state_population > 10000
+                infrastructure > 0
+            }
+        }
+
+        days_remove = 2
+
+        days_re_enable = 1
+
+        target_array = ROOT.owned_states
+        target_trigger = {
+            FROM = {
+                has_state_category = pastoral
+            }
+        }
+        on_map_mode = map_only
+        icon = generic_research
+        cost = 20
+        complete_effect = {
+            FROM = {
+               increase_state_category = yes
+            }
+        }
+    }
+
+    upgrade_rural_state = { #주 업글
+        state_target = yes
+        target_root_trigger = {
+            any_owned_state = {
+                has_state_category = rural
+            }
+        }
+        available = {
+            FROM = {
+                has_state_category = rural
+                state_population > 40000
+                infrastructure > 1
+            }
+        }
+
+        days_remove = 2
+
+        days_re_enable = 1
+
+        target_array = ROOT.owned_states
+        target_trigger = {
+            FROM = {
+                has_state_category = rural
+            }
+        }
+        on_map_mode = map_only
+        icon = generic_research
+        cost = 20
+        complete_effect = {
+            FROM = {
+               increase_state_category = yes
+            }
+        }
+    }
+
+    upgrade_town_state = { #주 업글
+        state_target = yes
+        target_root_trigger = {
+            any_owned_state = {
+                has_state_category = town
+            }
+        }
+        available = {
+            FROM = {
+                has_state_category = town
+                state_population > 80000
+                infrastructure > 1
+            }
+        }
+
+        days_remove = 2
+
+        days_re_enable = 1
+
+        target_array = ROOT.owned_states
+        target_trigger = {
+            FROM = {
+                has_state_category = town
+            }
+        }
+        on_map_mode = map_only
+        icon = generic_research
+        cost = 20
+        complete_effect = {
+            FROM = {
+               increase_state_category = yes
+            }
+        }
+    }
+
+    upgrade_large_town_state = { #주 업글
+        state_target = yes
+        target_root_trigger = {
+            any_owned_state = {
+                has_state_category = large_town
+            }
+        }
+        available = {
+            FROM = {
+                has_state_category = large_town
+                state_population > 200000
+                infrastructure > 2
+            }
+        }
+
+        days_remove = 2
+
+        days_re_enable = 1
+
+        target_array = ROOT.owned_states
+        target_trigger = {
+            FROM = {
+                has_state_category = large_town
+            }
+        }
+        on_map_mode = map_only
+        icon = generic_research
+        cost = 20
+        complete_effect = {
+            FROM = {
+               increase_state_category = yes
+            }
+        }
+    }
+
+    upgrade_city_state = { #주 업글
+        state_target = yes
+        target_root_trigger = {
+            any_owned_state = {
+                has_state_category = city
+            }
+        }
+        available = {
+            FROM = {
+                has_state_category = city
+                state_population > 500000
+                infrastructure > 2
+            }
+        }
+
+        days_remove = 2
+
+        days_re_enable = 1
+
+        target_array = ROOT.owned_states
+        target_trigger = {
+            FROM = {
+                has_state_category = city
+            }
+        }
+        on_map_mode = map_only
+        icon = generic_research
+        cost = 20
+        complete_effect = {
+            FROM = {
+               increase_state_category = yes
+            }
+        }
+    }
+
+    upgrade_large_city_state = { #주 업글
+        state_target = yes
+        target_root_trigger = {
+            any_owned_state = {
+                has_state_category = large_city
+            }
+        }
+        available = {
+            FROM = {
+                has_state_category = large_city
+                state_population > 1000000
+                infrastructure > 3
+            }
+        }
+
+        days_remove = 2
+
+        days_re_enable = 1
+
+        target_array = ROOT.owned_states
+        target_trigger = {
+            FROM = {
+                has_state_category = large_city
+            }
+        }
+        on_map_mode = map_only
+        icon = generic_research
+        cost = 20
+        complete_effect = {
+            FROM = {
+               increase_state_category = yes
+            }
+        }
+    }
+
+    upgrade_metropolis_state = { #주 업글
+        state_target = yes
+        target_root_trigger = {
+            any_owned_state = {
+                has_state_category = metropolis
+            }
+        }
+        available = {
+            FROM = {
+                has_state_category = metropolis
+                state_population > 5000000
+                infrastructure > 4
+            }
+        }
+
+        days_remove = 2
+
+        days_re_enable = 1
+
+        target_array = ROOT.owned_states
+        target_trigger = {
+            FROM = {
+                has_state_category = metropolis
+            }
+        }
+        on_map_mode = map_only
+        icon = generic_research
+        cost = 20
+        complete_effect = {
+            FROM = {
+               increase_state_category = yes
+            }
+        }
+    }
+}
