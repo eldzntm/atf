@@ -1,0 +1,77 @@
+on_actions = {
+    on_monthly = {
+        effect = {
+            if = {
+                limit = {
+                    tag = ZZZ
+                }
+                every_state = {
+                    if = {
+                        limit = {
+                            has_state_flag = explorationed_state
+                            has_state_category = wasteland
+                        }
+                        add_manpower = 10
+                    }
+                    else_if = {
+                        limit = {
+                            has_state_flag = explorationed_state
+                            has_state_category = pastoral
+                        }
+                        add_manpower = 25
+                    }
+                    else_if = {
+                        limit = {
+                            has_state_flag = explorationed_state
+                            has_state_category = rural
+                        }
+                        add_manpower = 50
+                    }
+                    else_if = {
+                        limit = {
+                            has_state_flag = explorationed_state
+                            has_state_category = town
+                        }
+                        add_manpower = 100
+                    }
+                    else_if = {
+                        limit = {
+                            has_state_flag = explorationed_state
+                            has_state_category = large_town
+                        }
+                        add_manpower = 250
+                    }
+                    else_if = {
+                        limit = {
+                            has_state_flag = explorationed_state
+                            has_state_category = city
+                        }
+                        add_manpower = 500
+                    }
+                    else_if = {
+                        limit = {
+                            has_state_flag = explorationed_state
+                            has_state_category = large_city
+                        }
+                        add_manpower = 1000
+                    }
+                    else_if = {
+                        limit = {
+                            has_state_flag = explorationed_state
+                            has_state_category = metropolis
+                        }
+                        add_manpower = 2500
+                    }
+                    else_if = {
+                        limit = {
+                            has_state_flag = explorationed_state
+                            has_state_category = megalopolis
+                        }
+                        add_manpower = 5000
+                    }
+                }    
+            }
+            
+        }
+    }
+}

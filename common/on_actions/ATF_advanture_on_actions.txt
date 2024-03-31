@@ -1,6 +1,6 @@
 on_actions = {
     on_daily = {
-        effect = {
+        effect = { #매일 랜덤 인구
             set_variable_to_random = {
                 var = random_people
                 min = 25
@@ -12,7 +12,7 @@ on_actions = {
     }
     on_state_control_changed = { #특별이벤트 선행
         effect = {
-            set_country_flag = not_regular_advanture_event
+            
             if = { #콘윌 탐사
                 limit = {
                     FROM.FROM = {
@@ -31,13 +31,13 @@ on_actions = {
         }
     }
 
-    on_state_control_changed = { #평상시
+    on_state_control_changed = { #ZZZ의 주를 점령했을때(탐사했을떄)
         random_events = {
             99 = atf_advanture.1
             1 = 0
         }
         effect = {
-            if = { #탐사했을떄
+            if = {
                 limit = {
                     FROM.FROM = {
                         NOT = { has_state_flag = explorationed_state }

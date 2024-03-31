@@ -10,6 +10,7 @@ country_event = { # 이주를 바라는 생존자 무리들
         AND = {
             NOT = { tag = ZZZ }
             NOT = { has_country_flag = not_regular_advanture_event }
+            NOT = { FROM.FROM = { state = 123 } }
         }
         
     }
@@ -29,7 +30,6 @@ country_event = { # 이주를 바라는 생존자 무리들
 
     option = { # 생존자들을 지역에 그대로둔다.
         name = atf_advanture.1.a
-        clr_country_flag = not_regular_advanture_event
         FROM.FROM = {
             add_manpower = ROOT.migration_people
         }
@@ -37,7 +37,6 @@ country_event = { # 이주를 바라는 생존자 무리들
     }
     option = { # 생존자들을 수도로 이주시킨다
         name = atf_advanture.1.b
-        clr_country_flag = not_regular_advanture_event
         capital_scope = {
             add_manpower = ROOT.migration_people
         }
